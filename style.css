@@ -19,6 +19,7 @@
 body {
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
+  text-rendering: smooth;
 }
 
 .container {
@@ -266,6 +267,9 @@ header.shadow .menu-toggle {
 }
 
 @media (max-width: 700px) {
+  .banner-title {
+    font-size: 2.2rem;
+  }
 
   .card:first-of-type,
   .card:last-of-type {
@@ -341,6 +345,13 @@ header.shadow .menu-toggle {
     line-height: 1.5rem;
   }
 
+  .card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 12;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
   .footer {
     flex-direction: column;
     row-gap: 1rem;
@@ -351,5 +362,14 @@ header.shadow .menu-toggle {
 
   .footer .social-link {
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
